@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-export let URL = 'https://rickandmortyapi.com/api/character';
-export let urlEps = 'https://rickandmortyapi.com/api/episode';
+export const URL = 'https://rickandmortyapi.com/api/character';
+export const urlEps = 'https://rickandmortyapi.com/api/episode';
 export let urlLocs = '';
 
 const getCharacters = async () => {
