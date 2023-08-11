@@ -6,8 +6,6 @@ import Cards from '../components/Cards';
 // import Pagination from '../components/Pagination';
 
 const Home = () => {
-  const charactersState = useSelector((state) => state.charactersReducers.characters);
-
   const [loading, setLoading] = useState(true)
 
   // let [pageNumber, setPageNumber] = useState(1);

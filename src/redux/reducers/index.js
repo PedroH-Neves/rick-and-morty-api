@@ -1,8 +1,10 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import charactersReducers from "./charactersReducer";
+import charactersReducers from "./charactersReducers";
+import episodesReducers from "./episodesReducers";
+import locationsReducers from "./locationsReducers";
 
 const rootReducer = combineReducers({
-  charactersReducers
+  charactersReducers, episodesReducers, locationsReducers
 })
 
 export default rootReducer;
