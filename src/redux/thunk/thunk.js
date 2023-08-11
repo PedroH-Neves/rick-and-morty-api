@@ -15,28 +15,4 @@ const fetchCharacters = () => {
     });
 }
 
-const fetchEpisodes = () => {
-  store.dispatch(actions.fetchEpisodesRequest());
-  const requestEpisodes = req.getEpisodes();
-
-  requestEpisodes.then(episodes => {
-    store.dispatch(actions.fetchEpisodesSuccess(episodes))
-  })
-    .catch(error => {
-      store.dispatch(actions.fetchEpisodesFailure(error))
-    });
-}
-
-const fetchLocations = () => {
-  store.dispatch(actions.fetchLocationsRequest());
-  const resquestLocations = req.getLocations();
-
-  resquestLocations.then(locations => {
-    store.dispatch(actions.fetchLocationsSuccess(locations))
-  })
-    .catch(error => {
-      store.dispatch(actions.fetchLocationsFailure(error))
-    });
-}
-
-export { fetchCharacters, fetchEpisodes, fetchLocations };
+export { fetchCharacters };

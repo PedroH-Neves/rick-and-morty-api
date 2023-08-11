@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
 import { fetchCharacters } from '../redux/thunk/thunk';
 import Loader from '../components/Loader';
 import Cards from '../components/Cards';
