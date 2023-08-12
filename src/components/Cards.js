@@ -6,9 +6,6 @@ const Cards = () => {
   const charactersState = useSelector((state) => state.charactersReducers.characters);
   const filterState = useSelector((state) => state.filter);
 
-  console.log(charactersState);
-  console.log('======================')
-  console.log(filterState);
   const renderChars = (
     filterState.length === 0
     ? 

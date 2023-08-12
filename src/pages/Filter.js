@@ -2,7 +2,7 @@ import ReactModal from "react-modal";
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import FilterOptions from "../components/FilterOptions";
-import { addFilter } from "../redux/actions/actions";
+import { addFilter, removeFilter } from "../redux/actions/actions";
 
 ReactModal.setAppElement('body')
 
@@ -21,6 +21,10 @@ const Filter = () => {
     dispatch(addFilter(selectedFilters))
   };
 
+  const removeFilters = () => {
+    dispatch(removeFilter());
+  }
+
   const createFilters = (status) => {
     return characters.filter(char => char.status === status)
   }
@@ -35,6 +39,8 @@ const Filter = () => {
         <ReactModal isOpen={showModal} onRequestClose={toggleModal}>
           <div>
             <FilterOptions options={options} selected={selected} onOptionChange={handleOptions} />
+            <button type="button" onClick={removeFilters}>RemoveFilter</button>
+            <button type="button" onClick={toggleModal}>X</button>
           </div>
         </ReactModal>
     </div>
