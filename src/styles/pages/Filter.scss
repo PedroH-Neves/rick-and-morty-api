@@ -1,9 +1,28 @@
 
 
 .modal-div {
-  background-color: aquamarine;
-  display: column;
-  justify-content: center;
+  text-align: center;
+  padding: 1rem 0;
+
+  background: #cb4175;
+
+
+  .filter-btn {
+    background-color: transparent;
+    color: azure;
+    font-size: 1.3rem;
+    padding: 12px;
+    border-radius: 50%;
+    transition: 1.8s;
+
+    &:hover {
+      border-radius: 1px;
+      border-color: rgb(22, 194, 59);
+      color: rgb(19, 199, 34);
+      cursor: pointer;
+      background: azure;
+    }
+  }
 }
 
 .react-modal {

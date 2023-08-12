@@ -11,19 +11,25 @@ const Cards = () => {
     ? 
     charactersState.map(char => (
       <Link to={`/details/${char.id}`} className="characters-card" key={char.name} id={char.id}>
-        {char.name}-{char.status}<img src={char.image} alt='' />
+        <figure>
+          <img src={char.image} alt='' />
+          <figcaption>{char.name}</figcaption>
+        </figure>
       </Link>
     ))
     :
     filterState[0].map(char => (
       <Link to={`/details/${char.id}`} className="characters-card" key={char.name} id={char.id}>
-        {char.name}-{char.status}<img src={char.image} alt='' />
+        <figure>
+          <img src={char.image} alt='' />
+          <figcaption>{char.name}</figcaption>
+        </figure>
       </Link>
     ))
   )
     
   return (
-    <div className="characters-grid">
+    <div className="cards-list">
       {renderChars}
     </div>
   )
