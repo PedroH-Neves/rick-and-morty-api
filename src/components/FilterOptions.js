@@ -1,13 +1,12 @@
 import '../styles/components/FilterOptions.scss';
+import PropTypes from 'prop-types';
 
-const FilterOptions = ({ options, onOptionChange, selected }) => {
-
-  return (
-    <>
+const FilterOptions = ({ options, onOptionChange, selected }) => (
+  <>
     <div className="options-div">
-      <h3 >FILTER LIST BY STATUS:</h3>
-      {options.map((option, index) => (
-        <label className={`${option}`} key={index}>
+      <h3>FILTER LIST BY STATUS:</h3>
+      {options.map((option) => (
+        <label className={`${option}`} key={option} htmlFor={`${option}`}>
           <input
             type="radio"
             value={option}
@@ -18,8 +17,13 @@ const FilterOptions = ({ options, onOptionChange, selected }) => {
         </label>
       ))}
     </div>
-    </>
-  )
-}
+  </>
+);
+
+FilterOptions.propTypes = {
+  options: PropTypes.string.isRequired,
+  onOptionChange: PropTypes.func.isRequired,
+  selected: PropTypes.bool.isRequired,
+};
 
 export default FilterOptions;

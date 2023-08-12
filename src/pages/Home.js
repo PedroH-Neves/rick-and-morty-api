@@ -1,33 +1,32 @@
 import { useEffect, useState } from 'react';
-import { fetchCharacters } from '../redux/thunk/thunk';
+import fetchCharacters from '../redux/thunk/thunk';
 import Loader from '../components/Loader';
 import Cards from '../components/Cards';
 import Filter from './Filter';
 // import Pagination from '../components/Pagination';
 
 const Home = () => {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
 
-  // let [pageNumber, setPageNumber] = useState(1);
-
-  //const api = `${URL}/?page=${pageNumber}`;
+  /* let [pageNumber, setPageNumber] = useState(1);
+  const api = `${URL}/?page=${pageNumber}`; */
 
   useEffect(() => {
     fetchCharacters();
     setLoading(false);
-  }, [setLoading])
+  }, [setLoading]);
 
   if (loading) {
-    return <Loader />
+    return <Loader />;
   }
 
   return (
     <>
       <Filter />
-      <Cards />      
+      <Cards />
       {/* <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} /> */}
     </>
   );
-}
+};
 
 export default Home;

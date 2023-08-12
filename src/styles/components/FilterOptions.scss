@@ -1,5 +1,5 @@
 .options-div {
-  display:  flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -7,7 +7,7 @@
   h3 {
     color: white;
     font-size: 26px;
-    font-size: bold;
+    font-weight: bold;
     font-variant: small-caps;
     margin-right: 30px;
   }
@@ -25,14 +25,14 @@
   }
 
   .Alive {
-    color: rgb(138, 223, 12)
-  };
+    color: rgb(138, 223, 12);
+  }
 
   .Dead {
     color: rgb(119, 28, 28);
   }
 
   .unknown {
-    color: rgb(99, 90, 90)
+    color: rgb(99, 90, 90);
   }
 }

@@ -1,56 +1,55 @@
-import ReactModal from "react-modal";
-import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import FilterOptions from "../components/FilterOptions";
-import { addFilter, removeFilter } from "../redux/actions/actions";
-import { faFilter } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ReactModal from 'react-modal';
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFilter } from '@fortawesome/free-solid-svg-icons';
+import FilterOptions from '../components/FilterOptions';
+import { addFilter, removeFilter } from '../redux/actions/actions';
 import '../styles/pages/Filter.scss';
 
-ReactModal.setAppElement('body')
+ReactModal.setAppElement('body');
 
 const Filter = () => {
-  const filters = useSelector(state => state.filter);
-  const characters = useSelector(state => state.charactersReducers.characters);
+  const characters = useSelector((state) => state.charactersReducers.characters);
   const dispatch = useDispatch();
 
   const [showModal, setShowModal] = useState(false);
   const [selected, setSelected] = useState('');
-  const options = ['Alive', 'Dead', 'unknown']
+  const options = ['Alive', 'Dead', 'unknown'];
+
+  const createFilters = (status) => (
+    characters.filter((char) => char.status === status)
+  );
 
   const handleOptions = (option) => {
     setSelected(option);
-    let selectedFilters = createFilters(option)
-    dispatch(addFilter(selectedFilters))
+    const selectedFilters = createFilters(option);
+    dispatch(addFilter(selectedFilters));
+  };
+
+  const toggleModal = () => {
+    setShowModal(!showModal);
   };
 
   const removeFilters = () => {
     dispatch(removeFilter());
     toggleModal();
-  }
-
-  const createFilters = (status) => {
-    return characters.filter(char => char.status === status)
-  }
-
-  const toggleModal = () => {
-    setShowModal(!showModal)
-  }
+  };
 
   return (
     <div className="modal-div">
       <button className="filter-btn" type="button" onClick={toggleModal}><FontAwesomeIcon icon={faFilter}>Filter</FontAwesomeIcon></button>
-        <ReactModal className='react-modal' isOpen={showModal} onRequestClose={toggleModal}>
-          <div className="modal">
-            <div className="options-div">
+      <ReactModal className="react-modal" isOpen={showModal} onRequestClose={toggleModal}>
+        <div className="modal">
+          <div className="options-div">
             <FilterOptions options={options} selected={selected} onOptionChange={handleOptions} />
-            </div>
-            <button type="button" className="remove-filter" onClick={removeFilters}>CLEAR FILTERS</button>
-            <button type="button" className="close-btn" onClick={toggleModal}>X</button>
           </div>
-        </ReactModal>
+          <button type="button" className="remove-filter" onClick={removeFilters}>CLEAR FILTERS</button>
+          <button type="button" className="close-btn" onClick={toggleModal}>X</button>
+        </div>
+      </ReactModal>
     </div>
-  )
-}
+  );
+};
 
 export default Filter;

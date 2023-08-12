@@ -9,9 +9,9 @@ const App = () => (
     <Header />
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path='/details/:id' element={<Details />} />
+      <Route path="/details/:id" element={<Details />} />
     </Routes>
   </>
-)
+);
 
 export default App;

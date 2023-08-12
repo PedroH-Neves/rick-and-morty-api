@@ -1,4 +1,4 @@
-import { ADD_FILTER, REMOVE_FILTER } from "../actions/actions";
+import { ADD_FILTER, REMOVE_FILTER } from '../actions/actions';
 
 const filter = (state = [], action) => {
   switch (action.type) {
@@ -7,8 +7,8 @@ const filter = (state = [], action) => {
     case REMOVE_FILTER:
       return [];
     default:
-      return state;  
+      return state;
   }
-}
+};
 
 export default filter;
