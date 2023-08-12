@@ -1,10 +1,10 @@
 .cards-list {
-  width: 90%;
   margin: 0 auto;
   background: #ec4c8a;
   padding: 3rem 10rem;
   display: grid;
   grid-template-columns: repeat(3, minmax(200px, 1fr));
+  text-decoration: none;
 
   @media (max-width: 992px) {
     padding: 2.5rem 3rem;

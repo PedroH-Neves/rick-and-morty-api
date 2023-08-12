@@ -5,7 +5,7 @@ const FilterOptions = ({ options, onOptionChange, selected }) => {
   return (
     <>
     <div className="options-div">
-      <h3 >SELECT CHARACTER STATUS:</h3>
+      <h3 >FILTER LIST BY STATUS:</h3>
       {options.map((option, index) => (
         <label className={`${option}`} key={index}>
           <input
