@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { fetchCharacters } from '../redux/thunk/thunk';
 import Loader from '../components/Loader';
 import Cards from '../components/Cards';
+import Filter from './Filter';
 // import Pagination from '../components/Pagination';
 
 const Home = () => {
@@ -21,12 +22,11 @@ const Home = () => {
   }
 
   return (
-    <div>
-      <div>
-      <Cards /> 
-      </div>
+    <>
+      <Filter />
+      <Cards />      
       {/* <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} /> */}
-    </div>
+    </>
   );
 }
 

@@ -12,7 +12,6 @@ const Details = () => {
 
   useEffect(() => {
     setChar(charDetails)
-    console.log(char)
   }, [])
 
   const renderChar = {

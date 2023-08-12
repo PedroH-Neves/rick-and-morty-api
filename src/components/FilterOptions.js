@@ -1,24 +1,21 @@
-const FilterOptions = ({ handleChange, selected }) => {
-
+const FilterOptions = ({ options, onOptionChange, selected }) => {
 
   return (
     <>
-      <form>
-        <fieldset>
-          <label htmlFor='Alive'>
-            Alive
-          </label>
-          <input type="radio" value='Alive' id="Alive" checked={selected} onChange={handleChange}/>
-          <label htmlFor='Dead'>
-            Dead
-          </label>
-          <input type="radio" value='Dead' id="Dead" checked={selected} onChange={handleChange}/>
-          <label htmlFor='unknow'>
-            unknow
-          </label>
-          <input type="radio" value='unknow' id="unknow" checked={selected} onChange={handleChange}/>
-        </fieldset>
-      </form>
+    <div>
+      <h3>Select an Option:</h3>
+      {options.map((option, index) => (
+        <label key={index}>
+          <input
+            type="radio"
+            value={option}
+            checked={selected === option}
+            onChange={() => onOptionChange(option)}
+          />
+          {option}
+        </label>
+      ))}
+    </div>
     </>
   )
 }
