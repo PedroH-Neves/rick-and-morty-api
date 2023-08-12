@@ -1,11 +1,13 @@
+import '../styles/components/FilterOptions.scss';
+
 const FilterOptions = ({ options, onOptionChange, selected }) => {
 
   return (
     <>
-    <div>
-      <h3>Select an Option:</h3>
+    <div className="options-div">
+      <h3 >SELECT CHARACTER STATUS:</h3>
       {options.map((option, index) => (
-        <label key={index}>
+        <label className={`${option}`} key={index}>
           <input
             type="radio"
             value={option}

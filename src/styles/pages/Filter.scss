@@ -1,0 +1,75 @@
+
+
+.modal-div {
+  background-color: aquamarine;
+  display: column;
+  justify-content: center;
+}
+
+.react-modal {
+  width: 700px;
+  margin: 5% auto 0 auto;
+  font-family: "Orbitron", sans-serif;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin: 1rem;
+  padding: 2rem;
+  background: rgb(65, 67, 69);
+  border-radius: 10%;
+  background:
+    linear-gradient(
+      201deg,
+      rgba(65, 67, 69, 1) 0%,
+      rgba(35, 37, 38, 1) 100%
+    );
+  
+  .options-div {
+    margin: 0 auto;
+  }
+
+  .close-btn {
+    width: 80px;
+    margin: 0 auto;
+    font-size: 3rem;
+    padding: 1rem;
+    border: 2px solid azure;
+    background: transparent;
+    transition: 0.6s;
+    color: white;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .close-btn:hover {
+    color: brown;
+    border-color: brown;
+  }
+
+  .remove-filter {
+    width: 200px;
+    height: 100px;
+    font-size: 20px;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+    background-color: yellow;
+    border-radius: 10px;
+    border-color: yellow;
+    border-width: 20px;
+    font-weight: bold;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .remove-filter:hover {
+    color: rgb(73, 70, 51);
+  }
+}
