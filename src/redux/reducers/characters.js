@@ -6,7 +6,7 @@ const initialState = {
   error: '',
 };
 
-export const charactersReducers = (state = initialState, action) => {
+const charactersReducers = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_CHARACTERS_REQUEST:
       return { ...state, loading: true };

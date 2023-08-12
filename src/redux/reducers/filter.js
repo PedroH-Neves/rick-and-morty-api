@@ -1,6 +1,6 @@
 import { ADD_FILTER, REMOVE_FILTER } from "../actions/actions";
 
-export const statusReducer = (state = [], action) => {
+const filter = (state = [], action) => {
   switch (action.type) {
     case ADD_FILTER:
       return [...state, action.payload];
@@ -10,3 +10,5 @@ export const statusReducer = (state = [], action) => {
       return state;  
   }
 }
+
+export default filter;

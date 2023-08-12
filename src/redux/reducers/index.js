@@ -1,9 +1,9 @@
 import { combineReducers } from "@reduxjs/toolkit";
 import charactersReducers from "./characters";
-import { statusReducer } from "./status";
+import filter from "./filter";
 
 const rootReducer = combineReducers({
-  charactersReducers, statusReducer
+  charactersReducers, filter
 })
 
 export default rootReducer;

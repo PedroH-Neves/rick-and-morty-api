@@ -1,17 +1,29 @@
 import ReactModal from "react-modal";
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import FilterOptions from "../components/FilterOptions";
+import { addFilter } from "../redux/actions/actions";
 
 ReactModal.setAppElement('body')
 
 const Filter = () => {
+  const filters = useSelector(state => state.filter);
+  const characters = useSelector(state => state.charactersReducers.characters);
+  const dispatch = useDispatch();
+
   const [showModal, setShowModal] = useState(false);
   const [selected, setSelected] = useState('');
   const options = ['Alive', 'Dead', 'unknown']
 
   const handleOptions = (option) => {
     setSelected(option);
+    let selectedFilters = createFilters(option)
+    dispatch(addFilter(selectedFilters))
   };
+
+  const createFilters = (status) => {
+    return characters.filter(char => char.status === status)
+  }
 
   const toggleModal = () => {
     setShowModal(!showModal)
