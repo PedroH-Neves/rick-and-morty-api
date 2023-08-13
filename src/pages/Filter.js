@@ -27,8 +27,9 @@ const Filter = () => {
     dispatch(addFilter(selectedFilters));
   };
 
-  const toggleModal = () => {
+  const toggleModal = (e) => {
     setShowModal(!showModal);
+    e.target.value = '';
   };
 
   const removeFilters = () => {

@@ -13,10 +13,10 @@ const CharDetails = ({ char }) => {
 
   return (
     <>
-      <button type="button" className="back-arrow" onClick={backHome}>
-        <FontAwesomeIcon icon={faAngleLeft}>Arrow</FontAwesomeIcon>
-      </button>
       <div className="detail-div">
+        <button type="button" className="back-arrow" onClick={backHome}>
+          <FontAwesomeIcon icon={faAngleLeft}>Arrow</FontAwesomeIcon>
+        </button>
         <img src={char.image} alt="" />
         <ul>
           <li>

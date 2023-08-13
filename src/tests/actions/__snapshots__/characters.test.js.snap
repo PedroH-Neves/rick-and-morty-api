@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`characters creation should fetch characters with failure 1`] = `
+Array [
+  Object {
+    "type": "FETCH_CHARACTERS_REQUEST",
+  },
+  Object {
+    "payload": Object {
+      "characters": Object {
+        "name": "test character",
+      },
+      "error": "",
+      "loading": false,
+    },
+    "type": "FETCH_CHARACTERS_SUCCESS",
+  },
+  Object {
+    "payload": Object {
+      "characters": Object {},
+      "error": "some error",
+      "loading": false,
+    },
+    "type": "FETCH_CHARACTERS_FAILURE",
+  },
+]
+`;
+
+exports[`characters creation should fetch characters with success 1`] = `
+Array [
+  Object {
+    "type": "FETCH_CHARACTERS_REQUEST",
+  },
+  Object {
+    "payload": Object {
+      "characters": Object {
+        "name": "test character",
+      },
+      "error": "",
+      "loading": false,
+    },
+    "type": "FETCH_CHARACTERS_SUCCESS",
+  },
+]
+`;
+
+exports[`characters creation should request characters 1`] = `
+Array [
+  Object {
+    "type": "FETCH_CHARACTERS_REQUEST",
+  },
+]
+`;

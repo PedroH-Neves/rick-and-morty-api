@@ -80,4 +80,20 @@
       color: rgb(73, 70, 51);
     }
   }
+
+  @media (max-width: 700px) {
+    max-width: 80%;
+  }
+
+  @media (max-width: 650px) {
+    max-width: 75%;
+  }
+
+  @media (max-width: 580px) {
+    max-width: 65%;
+  }
+
+  @media (max-width: 530px) {
+    max-width: 55%;
+  }
 }

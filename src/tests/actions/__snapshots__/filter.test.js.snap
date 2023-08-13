@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions creation should add a filter 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "status": "Alive",
+    },
+    "type": "ADD_FILTER",
+  },
+]
+`;
+
+exports[`actions creation should remove a filter 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "status": "Alive",
+    },
+    "type": "ADD_FILTER",
+  },
+  Object {
+    "payload": Object {
+      "status": Array [
+        "Alive",
+        "Dead",
+      ],
+    },
+    "type": "REMOVE_FILTER",
+  },
+]
+`;

@@ -1,5 +1,9 @@
 .back-arrow {
   font-size: 40px;
+  border: none;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  align-self: start;
 }
 
 .detail-div {
@@ -29,5 +33,9 @@
         font-weight: bold;
       }
     }
+  }
+
+  @media (max-width: 990px) {
+    flex-direction: column;
   }
 }

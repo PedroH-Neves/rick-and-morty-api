@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Characters Reducers should handle Fetch Characters Failure 1`] = `
+Object {
+  "characters": Array [],
+  "error": undefined,
+  "loading": false,
+}
+`;
+
+exports[`Characters Reducers should handle Fetch Characters Request 1`] = `
+Object {
+  "characters": Array [],
+  "error": "",
+  "loading": true,
+}
+`;
+
+exports[`Characters Reducers should handle Fetch Characters Success 1`] = `
+Object {
+  "characters": undefined,
+  "error": "",
+  "loading": false,
+}
+`;
+
+exports[`Characters Reducers should return the initial state 1`] = `
+Object {
+  "characters": Array [],
+  "error": "",
+  "loading": false,
+}
+`;
