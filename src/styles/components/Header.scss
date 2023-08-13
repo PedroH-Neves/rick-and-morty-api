@@ -1,0 +1,34 @@
+header {
+  background-image: url(../../assets/rickandmortyback.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+
+  .nav {
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(254, 255, 255, 0.39);
+
+    .logo {
+      width: 100px;
+      height: auto;
+    }
+
+    .links {
+      align-items: flex-start;
+      display: flex;
+      gap: 1rem;
+
+      a {
+        font-size: 1.2rem;
+        font-family: "Lato", sans-serif;
+        letter-spacing: 2px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #ec4c8a;
+      }
+    }
+  }
+}

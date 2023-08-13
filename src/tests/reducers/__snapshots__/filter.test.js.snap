@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Filter Characters Reducer should handle add a new filter 1`] = `
+Array [
+  undefined,
+]
+`;
+
+exports[`Filter Characters Reducer should handle remove filters 1`] = `Array []`;
+
+exports[`Filter Characters Reducer should return initial state 1`] = `Array []`;

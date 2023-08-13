@@ -1,0 +1,99 @@
+.modal-div {
+  text-align: center;
+  padding: 1rem 0;
+  background: #cb4175;
+
+  .filter-btn {
+    background-color: transparent;
+    color: azure;
+    font-size: 1.3rem;
+    padding: 12px;
+    border-radius: 50%;
+    transition: 1.8s;
+
+    &:hover {
+      border-radius: 1px;
+      border-color: rgb(22, 194, 59);
+      color: rgb(19, 199, 34);
+      cursor: pointer;
+      background: azure;
+    }
+  }
+}
+
+.react-modal {
+  width: 700px;
+  margin: 5% auto 0 auto;
+  font-family: "Orbitron", sans-serif;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 10%;
+  background:
+    linear-gradient(
+      201deg,
+      rgba(65, 67, 69, 1) 0%,
+      rgba(35, 37, 38, 1) 100%
+    );
+
+  .options-div {
+    margin: 0 auto;
+  }
+
+  .close-btn {
+    width: 80px;
+    margin: 0 auto;
+    font-size: 3rem;
+    padding: 1rem;
+    border: 2px solid rgb(240, 255, 255);
+    background: transparent;
+    transition: 0.6s;
+    color: rgb(255, 255, 255);
+
+    &:hover {
+      cursor: pointer;
+      color: rgb(165, 42, 42);
+      border-color: rgb(165, 42, 42);
+    }
+  }
+
+  .remove-filter {
+    width: 200px;
+    height: 100px;
+    font-size: 20px;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+    background-color: rgb(255, 255, 0);
+    border-radius: 10px;
+    border-color: rgb(255, 255, 0);
+    border-width: 20px;
+    font-weight: bold;
+
+    &:hover {
+      cursor: pointer;
+      color: rgb(73, 70, 51);
+    }
+  }
+
+  @media (max-width: 700px) {
+    max-width: 80%;
+  }
+
+  @media (max-width: 650px) {
+    max-width: 75%;
+  }
+
+  @media (max-width: 580px) {
+    max-width: 65%;
+  }
+
+  @media (max-width: 530px) {
+    max-width: 55%;
+  }
+}
